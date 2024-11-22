@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <title>Exemple molt simple formularis i PHP</title>
+        <link rel="stylesheet" href="exemple.css" type="text/css"> 
+    </head>
+    <body>
+        <h1>Mostrar assignatures</h1>
+        <h2>Introduir usuari i contrasenya d'Oracle</h2>
+        <hr>
+        <form action="mostraAssignatures.php" method="post">
+            <p>Usuari: <input type="text" name="usuari"></p>
+            <p>Contrasenya: <input type="password" name="password"></p>
+            <p>Ordenació: <select name="ordenacio">
+                             <option value="sense">sense ordenar</option>
+                             <option value="codi">ordenat per codi</option>
+                             <option value="nom">ordenat per nom</option>
+                             <option value="credits">ordenat per crèdits</option>
+                          </select></p>
+            <input type="submit" value="Mostra">
+        </form>
+        <hr>
+</html>
+
+
+
