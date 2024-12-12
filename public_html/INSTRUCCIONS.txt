@@ -1,0 +1,24 @@
+
+- Cal que editeu l'arxiu "test.php" i canvieu "PASSWORD" per la vostra contrasenya d'Oracle.
+
+- Els arxius PHP que genereu han de tenir, a la primera linia, la cadena:
+
+#!/usr/bin/php-cgi
+
+- Els scripts PHP s'executen sota el vostre usuari.
+ 
+- Els scripts PHP han de tenir el flag d'execucio activat:
+
+	Per assegurar-vos que els flags son correctes, executeu les dues comandes següents:
+		
+		$ cd
+		$ chmod -R 711 .
+
+
+- Atencio: assegureu-vos que estan en format ASCII de Unix i no DOS. Podeu utilitzar la comanda "dos2unix" per a fer la transformació si cal.
+
+- La URL per accedir al vostre contingut es:
+
+https://bas.udg.edu/~u1994947/test.php
+
+(canvieu "test.php" per l'script corresponent).
