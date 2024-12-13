@@ -20,10 +20,11 @@
 ?>
   <h1>Exemple PHP+SQL Oracle+HTML curs 24/25</h1>
   <h2>Operacions disponibles</h2>
-  <p> <a class="menu" href="mostrarAssignatures.php"> a) Donar d'alta un vehicle</a></p>
-  <p> <a class="menu" href="afegirAssignatura.php">b) Mostrar vehicles</a></p>
-  <p> <a class="menu" href="qualificarAssignatura.php">c) Inscripcions en una cursa</a></p>
-  <p> <a class="menu" href="mostrarExpedient.php">d) </a></p>  
+  <p> <a class="menu" href="mostrarAssignatures.php">a) Donar d'alta un vehicle (pendent)</a></p>
+  <p> <a class="menu" href="afegirAssignatura.php">b) Mostrar vehicles (pendent)</a></p>
+  <p> <a class="menu" href="qualificarAssignatura.php">c) Inscripcions en una cursa (pendent)</a></p>
+  <p> <a class="menu" href="mostrarExpedient.php">d) Entrar temps de tots els participants (pendent)</a></p>  
+  <p> <a class="menu" href="mostrarExpedient.php">e) (pendent)</a></p>  
   <?php peu("Tornar a la pàgina de login","practicaPHP.html");?>
 </body>
 </html>
