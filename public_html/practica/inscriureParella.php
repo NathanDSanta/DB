@@ -33,14 +33,14 @@
       <select name="personatge">
       <option value=""> -- sense especificar -- </option>
 <?php 
-    $vehicle = "select alias from personatges";
-    $comanda = oci_parse($conn, $vehicle);
+    $personatge = "select alias,usuari from personatges";
+    $comanda = oci_parse($conn, $personatge);
     $exit=oci_execute($comanda);
     if (!$exit){
         mostraErrorExecucio($comanda);
     }
     while (($fila = oci_fetch_array($comanda, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
-        echo "      <option value=\"" . $fila['ALIAS'] . "\">" . $fila['ALIAS'] . "</option>\n";
+        echo "      <option value=\"" . $fila['ALIAS'] . "\">" . $fila['ALIAS']. " - " . $fila['USUARI'] . "</option>\n";
     }
     echo "      </select></p>";
   ?>      
@@ -55,7 +55,7 @@
         mostraErrorExecucio($comanda);
     }
     while (($fila = oci_fetch_array($comanda, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
-        echo "      <option value=\"" . $fila['CODI'] . "\">" . $fila['DESCRIPCIO'] . "</option>\n";
+        echo "      <option value=\"" . $fila['CODI'] . "\">" . $fila['DESCRIPCIO'] . " - " . $fila['PROPIETARI'] . "</option>\n";
     }
     echo "      </select></p>";
   ?>      
