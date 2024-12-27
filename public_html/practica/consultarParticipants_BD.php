@@ -21,7 +21,7 @@
     $consulta="select v.codi, v.descripcio, p.personatge, coalesce(cast(p.temps as varchar(9)), 'Abandonat') as temps 
     from participantscurses p 
     join vehicles v on p.vehicle = v.codi 
-    where p.cursa='Rally2020' 
+    where p.cursa=:cursa 
     order by temps";
   } else {
     capcalera("Llistat de participants"); 
