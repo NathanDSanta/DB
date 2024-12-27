@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Exemple PHP: mostrar totes les assignatures</title>
+  <title>Exemple PHP: mostrar vehicles</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
