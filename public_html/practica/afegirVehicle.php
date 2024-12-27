@@ -20,7 +20,7 @@
   <p><label>Data: </label><input type="date" name="data"></p>
   <p><label>Preu: </label><input type="number" min="0" name="semestre"></p>
   <p><label>Grup Vehicles:</label>
-      <select name="vehicle">
+      <select name="grupvehicle">
       <option value="">--sense especificar--</option>
 <?php 
     $vehicles = "SELECT codi, descripcio 
