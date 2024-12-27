@@ -22,7 +22,7 @@
   <h2>Operacions disponibles</h2>
   <p> <a class="menu" href="afegirVehicle.php"> a) Donar d'alta un vehicle</a></p>
   <p> <a class="menu" href="mostrarVehicles.php">b) Mostrar Vehicles</a></p>
-  <p> <a class="menu" href=".php">c) </a></p>
+  <p> <a class="menu" href="inscripcions.php">c) Inscripcions en una cursa</a></p>
   <p> <a class="menu" href="seleccionarCursa.php">d) Entrar temps de tots els participants</a></p>  
   <p> <a class="menu" href="consultarParticipants.php">e) Consultar els participants d'una cursa</a></p>  
   <?php peu("Tornar a la pàgina de login","practicaPHP.html");?>
