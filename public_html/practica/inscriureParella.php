@@ -11,8 +11,8 @@
   include 'funcions.php';     
   iniciaSessio();
   connecta($conn);
-  if(!isset($_POST['cursa'])) $_SESSION['cursa'] = $_POST['cursa'];
-  if(!isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . " " . $_POST['hora'];
+  if(isset($_POST['cursa'])) $_SESSION['cursa'] = $_POST['cursa'];
+  if(isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . " " . $_POST['hora'];
   $actualitzarData = "update curses set inicireal=TO_DATE(:inici, 'YYYY-MM-DD HH24:MI:SS') where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
@@ -24,7 +24,7 @@
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
   $exit = oci_execute($comanda);
   $fila= oci_fetch_array($comanda);
-  capcalera("Inscriure parella cursa: ".$fila['NOM']); 
+  capcalera("Inscriure parella cursa: " . $fila['NOM']); 
 ?>
   <form action="inscriureParella_BD.php" method="post">
   <p><label>Personatge</label>
