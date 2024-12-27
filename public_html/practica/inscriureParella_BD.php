@@ -38,7 +38,7 @@
     $exit=oci_execute($comanda);
     if (!$exit) { mostraErrorExecucio($comanda);} // mostrem error i avortem
     $fila=oci_fetch_array($comanda); // no fem control d'errors 
-    if(fila){
+    if($fila){
     echo "<p> 
     Aquest usuari (" . $filaPersonatge["USUARI"] . ") ja esta inscrit:" .
     "Personatge -> " . $fila["PERSONATGE"] .
