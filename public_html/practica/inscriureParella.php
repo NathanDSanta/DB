@@ -11,16 +11,14 @@
   include 'funcions.php';     
   iniciaSessio();
   connecta($conn);
-  if(!isset($_SESSION['cursa']) && $_SESSION['cursa'] != $_POST['cursa']) $_SESSION['cursa'] = $_POST['cursa'];
-  if(!isset($_SESSION['inici']) && $_SESSION['inici'] != $_POST['data'] . " " . $_POST['hora'] ){
-  $_SESSION['inici'] = $_POST['data'] . " " . $_POST['hora'];
-  $actualitzarData = "update curses set inicireal=:inici where codi=:cursa";
+  if(!isset($_POST['cursa'])) $_SESSION['cursa'] = $_POST['cursa'];
+  if(!isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . " " . $_POST['hora'];
+  $actualitzarData = "update curses set inicireal= TO_DATE(:inici, 'YYYY-MM-DD HH24:MI:SS' where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
   oci_bind_by_name($comanda,":inici",$_SESSION['inici']);
   $exit = oci_execute($comanda);
   $fila= oci_fetch_array($comanda);
-  }
   $consulta="SELECT nom FROM curses WHERE codi=:cursa";
   $comanda = oci_parse($conn, $consulta);
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
