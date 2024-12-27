@@ -56,7 +56,7 @@
       <option value="">--sense especificar--</option>
 <?php 
     $vehicles = "SELECT alias, nom || ' ' || cognoms as nom 
-                     FROM combustibles order by nom";
+                     FROM usuaris order by nom";
     $comanda = oci_parse($conn, $vehicles);
     $exit=oci_execute($comanda);
     if (!$exit){
