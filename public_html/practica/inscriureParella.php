@@ -14,7 +14,7 @@
   if(!isset($_SESSION['cursa']) && $_SESSION['cursa'] != $_POST['cursa']) $_SESSION['cursa'] = $_POST['cursa'];
   if(!isset($_SESSION['data']) && $_SESSION['data'] != $_POST['data']){
   $_SESSION['data'] = $_POST['data'];
-  $actualitzarData = "update curses set inicireal=:data where codi=:cursa";
+  $actualitzarData = "update curses set inicireal=TO_DATE(:data, \'YYYY-MM-DD HH24:MI:SS\') where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
   oci_bind_by_name($comanda,":cursa",$_POST['cursa']);
   oci_bind_by_name($comanda,":data",$_POST['data']);
