@@ -20,10 +20,11 @@
 ?>
   <h1>Exemple PHP+SQL Oracle+HTML curs 24/25</h1>
   <h2>Operacions disponibles</h2>
-  <p> <a class="menu" href="mostrarAssignatures.php">a) Mostrar totes les assignatures</a></p>
-  <p> <a class="menu" href="afegirAssignatura.php">b) Afegir una nova assignatura</a></p>
-  <p> <a class="menu" href="qualificarAssignatura.php">c) Qualificar assignatura</a></p>
-  <p> <a class="menu" href="mostrarExpedient.php">d) Mostrar expedient alumnes per edat</a></p>  
+  <p> <a class="menu" href="mostrarAssignatures.php"> a) </a></p>
+  <p> <a class="menu" href="mostrarVehicles.php">b) Mostrar Vehicles</a></p>
+  <p> <a class="menu" href="qualificarAssignatura.php">c) </a></p>
+  <p> <a class="menu" href="mostrarExpedient.php">d) </a></p>  
+  <p> <a class="menu" href="mostrarExpedient.php">e) </a></p>  
   <?php peu("Tornar a la pàgina de login","index.html");?>
 </body>
 </html>
