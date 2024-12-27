@@ -18,7 +18,7 @@
     connecta($conn);
    }
 ?>
-  <h1>Exemple PHP+SQL Oracle+HTML curs 24/25</h1>
+  <h1>Practica PHP - Darius Natan, Santa</h1>
   <h2>Operacions disponibles</h2>
   <p> <a class="menu" href="afegirVehicle.php"> a) Donar d'alta un vehicle</a></p>
   <p> <a class="menu" href="mostrarVehicles.php">b) Mostrar Vehicles</a></p>
