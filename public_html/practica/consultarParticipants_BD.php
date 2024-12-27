@@ -11,9 +11,9 @@
   include 'funcions.php';     
   iniciaSessio();
   connecta($conn);
-  $consulta="SELECT codi, millortemps FROM curses WHERE codi=:cursa and millortemps is not null";
+  $consulta="SELECT codi, millortemps FROM curses WHERE codi=:carrera and millortemps is not null";
   $comanda = oci_parse($conn, $consulta);
-  oci_bind_by_name($comanda,":cursa",$_POST["cursa"]);
+  oci_bind_by_name($comanda,":carrera",$_POST["cursa"]);
   $exit = oci_execute($comanda);
   $temps=oci_fetch_array($comanda); // no fem control d'errors 
   if ($temps){ // no existeix cap assignatura amb el codi rebut 
