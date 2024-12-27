@@ -32,7 +32,7 @@
   }
   while (($fila = oci_fetch_array($comanda, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
       echo "    <p><label>".$fila['ALIAS']." - ".$fila['PERSONATGE'].", " .$fila['DESCRIPCIO'] .": </label>";
-      echo ' <input type="number" value="'.$fila['TEMPS'].'" name="'.$fila['CODI'].'"></p>'."\n";
+      echo ' <input type="number" step="0.01" value="'.$fila['TEMPS'].'" name="'.$fila['CODI'].'"></p>'."\n";
   }
   echo '    <p><input type = "hidden" name="cursa" value="'.$_POST['cursa'].'"></p>';
 ?>      
