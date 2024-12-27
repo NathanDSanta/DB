@@ -11,8 +11,8 @@
   include 'funcions.php';     
   iniciaSessio();
   connecta($conn);
-  if($_SESSION['cursa'] != $_POST['cursa']) $_SESSION['cursa'] = $_POST['cursa'];
-  if($_SESSION['data'] != $_POST['data']){
+  if(!isset($_SESSION['cursa']) && $_SESSION['cursa'] != $_POST['cursa']) $_SESSION['cursa'] = $_POST['cursa'];
+  if(!isset($_SESSION['data']) && $_SESSION['data'] != $_POST['data']){
   $_SESSION['data'] = $_POST['data'];
   $actualitzarData = "update curses set inicireal=:data where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
