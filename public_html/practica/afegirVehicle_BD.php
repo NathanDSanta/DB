@@ -20,6 +20,8 @@
   $exit = oci_execute($comanda);
   $fila=oci_fetch_array($comanda); // no fem control d'errors 
   while ($fila) {
+    $consultaCodi="SELECT codi, descripcio FROM Vehicles WHERE codi=:codiVehicle";
+    $comanda = oci_parse($conn, $consultaCodi);
     $codiVehicle = $codiVehicle . rand(0, 999);
     oci_bind_by_name($comanda,":codiVehicle", $codiVehicle);
     $exit = oci_execute($comanda);
