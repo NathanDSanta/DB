@@ -29,20 +29,6 @@
   capcalera("Inscriure parella cursa: ".$fila['NOM']); 
 ?>
   <form action="inscriureParella_BD.php" method="post">
-      <select name="vehicle">
-      <option value=""> -- sense especificar -- </option>
-<?php 
-    $vehicle = "";
-    $comanda = oci_parse($conn, $vehicle);
-    $exit=oci_execute($comanda);
-    if (!$exit){
-        mostraErrorExecucio($comanda);
-    }
-    while (($fila = oci_fetch_array($comanda, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
-        echo "      <option value=\"" . $fila['CODI'] . "\">" . $fila['NOM'] . "</option>\n";
-    }
-    echo "      </select></p>";
-  ?>      
   <p><label>Personatge</label>
       <select name="personatge">
       <option value=""> -- sense especificar -- </option>
@@ -73,6 +59,7 @@
     }
     echo "      </select></p>";
   ?>      
+  <p><label>&nbsp;</label><input type = "submit" value="Inscriure"></p>
 <?php peu("Tornar al menú principal","menu.php");?>
 </body>
 </html>
