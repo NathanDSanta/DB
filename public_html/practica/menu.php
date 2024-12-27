@@ -24,7 +24,7 @@
   <p> <a class="menu" href="mostrarVehicles.php">b) Mostrar Vehicles</a></p>
   <p> <a class="menu" href=".php">c) </a></p>
   <p> <a class="menu" href=".php">d) </a></p>  
-  <p> <a class="menu" href=".php">e) </a></p>  
+  <p> <a class="menu" href="consultarParticipants.php">e) Consultar els participants d'una cursa</a></p>  
   <?php peu("Tornar a la pàgina de login","practicaPHP.html");?>
 </body>
 </html>
