@@ -15,7 +15,7 @@
   $comanda = oci_parse($conn, $consulta);
   oci_bind_by_name($comanda,":cursa",$_POST['cursa']);
   $exit = oci_execute($comanda);
-  $fila= oci_fetch_array($comanda);
+  $fila= oci_fetch_array($comanda, OCI_ASSOC + OCI_RETURN_NULLS);
   capcalera("Entrar temps cursa ".$fila['NOM']); 
 ?>
   <form action="entrarTemps_BD.php" method="post">
