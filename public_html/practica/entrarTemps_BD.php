@@ -12,11 +12,11 @@
   iniciaSessio();
   connecta($conn);
   $cursa=$_POST['cursa'];
-  $consulta="SELECT nom FROM Assignatures WHERE codi=:cursa";
+  $consulta="SELECT nom FROM curses WHERE codi=:cursa";
   $comanda = oci_parse($conn, $consulta);
   oci_bind_by_name($comanda,":cursa",$cursa);
   $exit = oci_execute($comanda);
-  $fila= oci_fetch_array($comanda);
+  $fila = oci_fetch_array($comanda);
   $carrera=$fila['NOM'];
   unset ($_POST['cursa']); // per poder recorrer $_POST amb un foreach per les qualificacions
   capcalera("Temps dels participants de ".$carrera." enregistrades"); 
