@@ -31,7 +31,7 @@
     oci_execute($comanda); // no fem control d'errors
     }
   }
-  oci_free_statement($comanda);
+   oci_free_statement($comanda);
   $millortemps="UPDATE curses SET millortemps=(select min(temps) from participantscurses where cursa=:cursa) where codi=:cursa";
   $comanda = oci_parse($conn, $millortemps);
   oci_bind_by_name($comanda,":cursa",$cursa);
