@@ -26,7 +26,7 @@
     echo "<p> 
     El Personatge i el vehicle no pertanyen al mateix usuari (" .
     $_POST["personatge"] . " -> " . $filaPersonatge["USUARI"] . ", " .
-    $_POST["vehicles"] . " -> " . $filaVehicle["PROPIETARI"] .
+    $_POST["vehicle"] . " -> " . $filaVehicle["PROPIETARI"] .
     ")</p>";
   } else {
     $consulta = "select * from participantscurses where cursa=:cursa and vehicle=:vehicle and personatge=:personatge";
