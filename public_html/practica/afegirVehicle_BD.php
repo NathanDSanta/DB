@@ -14,7 +14,7 @@
   capcalera("Inserir Vehicle a la base de dades"); 
   $consultaCodi="SELECT codi, descripcio FROM Vehicles WHERE codi=:codiVehicle";
   $comanda = oci_parse($conn, $consultaCodi);
-  $codiVehicle = substr($_POST["grupvehicle"], 0, 3) . substr($_POST["descripcio"], 0, 6);
+  $codiVehicle = substr($_POST["grupvehicle"], 0, 2) . substr($_POST["descripcio"], 0, 5);
   $codiVehicle = str_replace(' ', '_', $codiVehicle);
   oci_bind_by_name($comanda,":codiVehicle",$codiVehicle);
   $exit = oci_execute($comanda);
