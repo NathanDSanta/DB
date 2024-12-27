@@ -17,7 +17,7 @@
   <p><label>Cursa:</label>
       <select name="cursa">
 <?php 
-    $consulta = "SELECT codi, nom FROM curses WHERE codi";
+    $consulta = "SELECT codi, nom FROM curses";
     $comanda = oci_parse($conn, $consulta);
     $exit=oci_execute($comanda);
     if (!$exit){
