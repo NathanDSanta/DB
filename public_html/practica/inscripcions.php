@@ -29,6 +29,7 @@
     echo "      </select></p>";
   ?>      
   <p><label>Data Inici: </label><input type="date" name="data"> </p>
+  <p><label>Hora Inici: </label><input type="time" name="hora"> </p>
   <p><label>&nbsp;</label><input type = "submit" value="Seleccionar"></p>
   </form>
 <?php peu("Tornar al menú principal","menu.php");?>
