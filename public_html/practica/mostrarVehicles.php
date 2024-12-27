@@ -12,7 +12,7 @@
   iniciaSessio();
   connecta($conn);
   capcalera("Mostrar Vehicles"); 
-    $consulta="select v.codi, v.descripcio, v.color, v.combustible, v.consum, v.consum*c.preuunitat, u.nom, u.cognoms 
+    $consulta="select v.codi, v.descripcio, v.color, v.combustible, v.consum, v.consum*c.preuunitat as costcombustible100km, u.nom, u.cognoms 
     from vehicles v 
     join combustibles c on v.combustible=c.descripcio 
     left outer join usuaris u on v.propietari=u.alias";
