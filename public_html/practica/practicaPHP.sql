@@ -2,7 +2,7 @@ SET ECHO OFF
 SET termout on
 SET feedback off
 
-DROP TABLE revisions;
+DROP TABLE Revisions;
 
 CREATE TABLE Revisions (
   codiVehicle varchar2(10) not null,
