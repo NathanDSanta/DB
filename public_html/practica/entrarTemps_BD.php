@@ -23,11 +23,13 @@
   capcalera("Temps dels participants de ".$carrera." enregistrades"); 
   oci_free_statement($comanda);
   $actualitzacioTemps="UPDATE participantscurses SET temps=:temps WHERE codi=:participant AND cursa=:cursa";
+  $consultaPersonatge="SELET personatge from participantscurses where cursa=:cursa and vehicle=:vehicle";
   $consultaRevisions="SELECT curses, personatge FROM revisions WHERE codiVehicle=:vehicle";
   $afegirRevisio="INSERT INTO revisions (codiVehicle, data, curses, personatge) values (:vehicle, :data, :curses, :personatge)";
   $updateRevisio="UPDATE revisions SET curses = curses + 1, personatge=:personatge where codivehicle = :vehicle and data = (select max(data) from revisions where codivehicle=:vehicle)";
   $comanda = oci_parse($conn, $actualitzacioTemps);
   $comandaRevisions = oci_parse($conn, $consultaRevisions);
+  $comandaPersonatge = oci_parse($conn, $consultaPersonatge);
   $comandaAfegirRevisio = oci_parse($conn, $afegirRevisio);
   $comandaUpdateRevisio = oci_parse($conn, $updateRevisio);
   oci_bind_by_name($comanda,":cursa",$cursa);
@@ -49,7 +51,12 @@
       mostraErrorExecucio($comandaRevisions);
     }
     $filaRevisio = oci_fetch_array($comandaRevisions);
-    $personatge = $filaRevisio['PERSONATGE'];
+    $exit = oci_execute($comandaPersonatge);
+    if (!$exit) {
+      mostraErrorExecucio($comandaPersonatge);
+    }
+    $filaPersonatge = oci_fetch_array($comandaPersonatge);
+    $personatge = $filaPersonatge['PERSONATGE'];
     if (!$filaRevisio || $filaRevisio['CURSES'] >= 3 || empty($valor)) {
     oci_bind_by_name($comandaAfegirRevisio,":vehicle",$vehicle);
     oci_bind_by_name($comandaAfegirRevisio,":data",$dataCarrera);
