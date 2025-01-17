@@ -49,7 +49,7 @@
       mostraErrorExecucio($comandaRevisions);
     }
     $filaRevisio = oci_fetch_array($comandaRevisions);
-    $personatge = $fila['PERSONATGE'];
+    $personatge = $filaRevisio['PERSONATGE'];
     if (!$filaRevisio || $filaRevisio['CURSES'] >= 3 || empty($valor)) {
     oci_bind_by_name($comandaAfegirRevisio,":vehicle",$vehicle);
     oci_bind_by_name($comandaAfegirRevisio,":data",$dataCarrera);
