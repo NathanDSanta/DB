@@ -12,8 +12,8 @@
   iniciaSessio();
   connecta($conn);
   if(isset($_POST['cursa'])) $_SESSION['cursa'] = $_POST['cursa'];
-  if(isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . " " . $_POST['hora'];
-  $actualitzarData = "update curses set inicireal=TO_DATE(:inici, 'YYYY-MM-DD HH:MI') where codi=:cursa";
+  if(isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . ' ' . $_POST['hora'];
+  $actualitzarData = "update curses set inicireal=TO_TIMESTAMP(:inici, 'YYYY-MM-DD HH24:MI') where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
     if (!$comanda) {
       mostraErrorParser($comanda);
@@ -24,6 +24,7 @@
   if (!$exit) {
     mostraErrorExecucio($exit);
   }
+  oci_free_statement($comanda);
 
   $consulta="SELECT nom FROM curses WHERE codi=:cursa";
   $comanda = oci_parse($conn, $consulta);
