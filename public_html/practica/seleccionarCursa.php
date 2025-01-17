@@ -28,7 +28,7 @@
     }
     echo "      </select></p>";
   ?>      
-  <p><label>&nbsp;</label><input type = "submit" value="Qualificar"></p>
+  <p><label>&nbsp;</label><input type = "submit" value="Seleccionar cursa"></p>
   </form>
 <?php peu("Tornar al menú principal","menu.php");?>
 </body>
