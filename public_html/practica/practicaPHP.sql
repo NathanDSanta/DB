@@ -5,7 +5,7 @@ SET feedback off
 DROP TABLE revisions;
 
 CREATE TABLE revisions (
-  codiVehicle varchar2(10) not null constraint cp_revisions primary key,
+  codiVehicle varchar2(10) not null,
   data date default null,
   curses number(4,0) default null,
   personatge varchar2(15) default null,
