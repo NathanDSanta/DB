@@ -18,6 +18,7 @@
     if (!$comanda) {
       mostraErrorParser($comanda);
     }
+  echo $_SESSION['cursa'] . $_SESSION['inici'];
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
   oci_bind_by_name($comanda,":inici",$_SESSION['inici']);
   $exit = oci_execute($comanda);
