@@ -20,8 +20,8 @@
 ?>
   <h1>Practica PHP - Darius Natan, Santa</h1>
   <h2>Operacions disponibles</h2>
-  <p> <a class="menu" href="revisioData.php">f1) Consulta dels vehicles revisats entre dues dates></p>
-  <p> <a class="menu" href="revisioUsuari.php">f2) Consulta de les revisions fetes en els vehicles d'un usuari></p>
+  <p> <a class="menu" href="revisioData.php">f1) Consulta dels vehicles revisats entre dues dates</a></p>
+  <p> <a class="menu" href="revisioUsuari.php">f2) Consulta de les revisions fetes en els vehicles d'un usuari</a></p>
   <?php peu("Tornar a la pàgina de login","practicaPHP.html");?>
 </body>
 </html>
