@@ -12,8 +12,8 @@ CREATE TABLE revisions (
   PRIMARY KEY(codiVehicle,data),
   constraint cf_revisions_codiVehicle
     FOREIGN KEY(codiVehicle) 
-    REFERENCES vehicles(codi) 
+    REFERENCES vehicles(codi), 
   constraint cf_revisions_personatge
     FOREIGN KEY(personatge) 
-    REFERENCES personatges(alias) 
+    REFERENCES personatges(alias)
 );
