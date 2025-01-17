@@ -23,7 +23,7 @@
   capcalera("Temps dels participants de ".$carrera." enregistrades"); 
   oci_free_statement($comanda);
   $actualitzacioTemps="UPDATE participantscurses SET temps=:temps WHERE codi=:participant AND cursa=:cursa";
-  $consultaPersonatge="SELET personatge from participantscurses where cursa=:cursa and vehicle=:vehicle";
+  $consultaPersonatge="SELECT personatge from participantscurses where cursa=:cursa and vehicle=:vehicle";
   $consultaRevisions="SELECT curses, personatge FROM revisions WHERE codiVehicle=:vehicle";
   $afegirRevisio="INSERT INTO revisions (codiVehicle, data, curses, personatge) values (:vehicle, :data, :curses, :personatge)";
   $updateRevisio="UPDATE revisions SET curses = curses + 1, personatge=:personatge where codivehicle = :vehicle and data = (select max(data) from revisions where codivehicle=:vehicle)";
