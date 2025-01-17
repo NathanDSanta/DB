@@ -12,7 +12,11 @@
   iniciaSessio();
   connecta($conn);
   if(isset($_POST['cursa'])) $_SESSION['cursa'] = $_POST['cursa'];
-  if(isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . ' ' . $_POST['hora'];
+    if(isset($_POST['inici'])) {
+    $_SESSION['inici'] = $_POST['data'] . ' ' . $_POST['hora'];
+    echo $_POST['data'] . ' ' . $_POST['hora'];
+    echo $_SESSION['inici'];
+    }
   $actualitzarData = "update curses set inicireal=TO_TIMESTAMP(:inici, 'YYYY-MM-DD HH24:MI') where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
     if (!$comanda) {
