@@ -13,7 +13,6 @@
   connecta($conn);
   $consultaPersonatge="SELECT usuari FROM personatges WHERE alias=:personatge";
   $consultaVehicle="SELECT propietari FROM vehicles WHERE codi=:vehicle";
-  $consultaUsuari="SELECT propietari FROM vehicles WHERE codi=:vehicle";
   $comandaPersonatge = oci_parse($conn, $consultaPersonatge);
   $comandaVehicle = oci_parse($conn, $consultaVehicle);
   oci_bind_by_name($comandaPersonatge,":personatge",$_POST["personatge"]);
