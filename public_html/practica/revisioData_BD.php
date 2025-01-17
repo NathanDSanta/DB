@@ -14,11 +14,14 @@
   capcalera("Mostrar Vehicles"); 
     $consulta="select * 
     from revisions  
+    where data >= to_date(:datainici, 'YYYY-MM-DD') and data <= to_date(:datafinal, 'YYYY-MM-DD')
     order by data 
     ";
 //	$consulta="SELECT * FROM Assignatures WHERE codi='aaa"; //error oci_parse
 //  $consulta="SELECT * FROM Assignatur"; // error oci_execute             
 	$comanda = oci_parse($conn, $consulta);
+  oci_bind_by_name($comanda, ":datainici", $_POST['dataInici']);
+  oci_bind_by_name($comanda, ":datafinal", $_POST['dataFinal']);
 	if (!$comanda) { mostraErrorParser($conn,$consulta);} // mostrem error i avortem
 	$exit=oci_execute($comanda);
 	if (!$exit) { mostraErrorExecucio($comanda);} // mostrem error i avortem
