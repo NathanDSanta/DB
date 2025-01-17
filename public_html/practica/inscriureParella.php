@@ -18,6 +18,9 @@
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
   oci_bind_by_name($comanda,":inici",$_SESSION['inici']);
   $exit = oci_execute($comanda);
+  if (!$exit) {
+  mostraErrorExecucio(exit);
+  }
 
   $consulta="SELECT nom FROM curses WHERE codi=:cursa";
   $comanda = oci_parse($conn, $consulta);
