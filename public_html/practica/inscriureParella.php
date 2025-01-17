@@ -15,6 +15,9 @@
   if(isset($_POST['inici'])) $_SESSION['inici'] = $_POST['data'] . " " . $_POST['hora'];
   $actualitzarData = "update curses set inicireal=TO_DATE(:inici, 'YYYY-MM-DD HH:MI') where codi=:cursa";
   $comanda = oci_parse($conn, $actualitzarData);
+    if (!$comanda) {
+      mostraErrorParser($comanda);
+    }
   oci_bind_by_name($comanda,":cursa",$_SESSION['cursa']);
   oci_bind_by_name($comanda,":inici",$_SESSION['inici']);
   $exit = oci_execute($comanda);
