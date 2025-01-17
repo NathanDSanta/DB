@@ -20,7 +20,7 @@
 ?>
   <form action="entrarTemps_BD.php" method="post">
 <?php 
-      $consulta = "select p.codi, u.alias, p.personatge, v.descripcio, p.temps
+      $consulta = "select p.codi, u.alias, p.personatge, v.descripcio, p.temps, p.vehicle
       from participantscurses p
       join vehicles v on p.vehicle=v.codi
       join usuaris u on v.propietari=u.alias where p.cursa=:cursa";
@@ -32,7 +32,7 @@
   }
   while (($fila = oci_fetch_array($comanda, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
       echo "    <p><label>".$fila['ALIAS']." - ".$fila['PERSONATGE'].", " .$fila['DESCRIPCIO'] .": </label>";
-      echo ' <input type="number" step="0.01" value="'.$fila['TEMPS'].'" name="'.$fila['CODI'].'"></p>'."\n";
+      echo ' <input type="number" step="0.01" value="'.$fila['TEMPS'].'" name="'.$fila['CODI']. '-' .$fila['VEHICLE'].'"></p>'."\n";
   }
   echo '    <p><input type = "hidden" name="cursa" value="'.$_POST['cursa'].'"></p>';
 ?>      

@@ -14,7 +14,7 @@
   echo "<p>No m'he pogut connectar a la Base de Dades.</p> \n";
   echo "<p>Repassa usuari/password. He rebut (" . 
         $_SESSION['usuari'] . "/" . $_SESSION['password'] . ")</p>\n";
-  peu("Tornar a la pàgina de login","index.html");
+  peu("Tornar a la pàgina de login","practicaPHP.html");
   ?>
 </body>
 </html>
