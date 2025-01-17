@@ -62,7 +62,8 @@
     if (!$filaRevisio || $filaRevisio['CURSES'] >= 3 || empty($valor)) {
     oci_bind_by_name($comandaAfegirRevisio,":vehicle",$vehicle);
     oci_bind_by_name($comandaAfegirRevisio,":data",$dataCarrera);
-    oci_bind_by_name($comandaAfegirRevisio,":curses",1);
+    $var = 1;
+    oci_bind_by_name($comandaAfegirRevisio,":curses",$var);
     oci_bind_by_name($comandaAfegirRevisio,":personatge",$personatge);
     $exit = oci_execute($comandaAfegirRevisio); 
     if (!$exit) {
