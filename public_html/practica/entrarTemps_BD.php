@@ -51,13 +51,13 @@
       mostraErrorExecucio($comandaRevisions);
     }
     $filaRevisio = oci_fetch_array($comandaRevisions);
+    oci_bind_by_name($comandaPersonatge,":cursa",$cursa);
+    oci_bind_by_name($comandaPersonatge,":vehicle",$vehicle);
     $exit = oci_execute($comandaPersonatge);
     if (!$exit) {
       mostraErrorExecucio($comandaPersonatge);
     }
     $filaPersonatge = oci_fetch_array($comandaPersonatge);
-    oci_bind_by_name($comandaAfegirRevisio,":cursa",$cursa);
-    oci_bind_by_name($comandaAfegirRevisio,":vehicle",$vehicle);
     $personatge = $filaPersonatge['PERSONATGE'];
     if (!$filaRevisio || $filaRevisio['CURSES'] >= 3 || empty($valor)) {
     oci_bind_by_name($comandaAfegirRevisio,":vehicle",$vehicle);
