@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Practica PHP: Mostrar participants d'una cursa, entrada de dades</title>
+  <title>Practica PHP: Consultar revisions d'un usuari </title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
@@ -11,7 +11,7 @@
     include 'funcions.php';     
     iniciaSessio();
     connecta($conn);
-    capcalera("Mostrar participants d'una cursa"); 
+    capcalera("Consultar revisions d'un usuari"); 
  ?>
   <form action="revisioUsuari_BD.php" method="post">
   <p><label>Cursa:</label>

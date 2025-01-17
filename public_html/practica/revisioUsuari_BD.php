@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Exemple PHP: mostrar vehicles</title>
+  <title>Practica PHP: Mostra de les revisions d'un usuari</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
@@ -11,7 +11,7 @@
   include 'funcions.php';     
   iniciaSessio();
   connecta($conn);
-  capcalera("Mostrar Vehicles"); 
+  capcalera("Mostra de les revisions d'un usuari"); 
     $consulta="select * 
     from revisions  
     where codivehicle in (

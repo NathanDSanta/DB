@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Exemple PHP: mostrar vehicles</title>
+  <title>Practica PHP: Mostra de les consultes en un període</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
@@ -11,7 +11,7 @@
   include 'funcions.php';     
   iniciaSessio();
   connecta($conn);
-  capcalera("Mostrar Vehicles"); 
+  capcalera("Mostra de les consultes en un període"); 
     $consulta="select * 
     from revisions  
     where data >= to_date(:datainici, 'YYYY-MM-DD') and data <= to_date(:datafinal, 'YYYY-MM-DD')

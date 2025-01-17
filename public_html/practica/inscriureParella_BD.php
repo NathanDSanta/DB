@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Practica PHP: Mostrar participants d'una cursa, inserció a la base de dades</title>
+  <title>Practica PHP: Inscriure una parella Vehicle-Personatge a una cursa, inserció a la base de dades</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>

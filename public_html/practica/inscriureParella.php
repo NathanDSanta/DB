@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Exemple PHP: qualificar una assignatura, posar notes</title>
+  <title>Practica PHP: Inscriure una parella Vehicle-Personatge</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>

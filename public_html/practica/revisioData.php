@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Practica PHP: Inscripcions en una cursa, seleccio cursa</title>
+  <title>Practica PHP: Consultar revisions en un període</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
@@ -11,7 +11,7 @@
     include 'funcions.php';     
     iniciaSessio();
     connecta($conn);
-    capcalera("Inscripcions en una cursa"); 
+    capcalera("Consultar revisions en un període"); 
  ?>
   <form action="revisioData_BD.php" method="post">
   <p><label>Data Inici: </label><input type="date" name="dataInici"> </p>

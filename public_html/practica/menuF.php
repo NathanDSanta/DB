@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Practica PHP: menú</title>
+  <title>Practica PHP: Consultar revisions</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
@@ -18,7 +18,7 @@
     connecta($conn);
    }
 ?>
-  <h1>Practica PHP - Darius Natan, Santa</h1>
+  <h1>Consultar Revisions</h1>
   <h2>Operacions disponibles</h2>
   <p> <a class="menu" href="revisioData.php">f1) Consulta dels vehicles revisats entre dues dates</a></p>
   <p> <a class="menu" href="revisioUsuari.php">f2) Consulta de les revisions fetes en els vehicles d'un usuari</a></p>

@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Exemple PHP: error de login</title>
+  <title>Practica PHP: error de login</title>
   <link rel="stylesheet" href="exemple.css" type="text/css"> 
 </head>
 <body>
