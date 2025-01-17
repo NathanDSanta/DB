@@ -25,7 +25,7 @@
   <p> <a class="menu" href="inscripcions.php">c) Inscripcions en una cursa</a></p>
   <p> <a class="menu" href="seleccionarCursa.php">d) Entrar temps de tots els participants</a></p>  
   <p> <a class="menu" href="consultarParticipants.php">e) Consultar els participants d'una cursa</a></p>  
-  <p> <a class="menu" href="consultarParticipants.php">f) Consultar Revisions</a></p>  
+  <p> <a class="menu" href="menuF.php">f) Consultar Revisions</a></p>  
   <?php peu("Tornar a la pàgina de login","practicaPHP.html");?>
 </body>
 </html>
