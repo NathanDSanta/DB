@@ -19,7 +19,7 @@
   oci_bind_by_name($comanda,":inici",$_SESSION['inici']);
   $exit = oci_execute($comanda);
   if (!$exit) {
-  mostraErrorExecucio(exit);
+    mostraErrorExecucio($exit);
   }
 
   $consulta="SELECT nom FROM curses WHERE codi=:cursa";
